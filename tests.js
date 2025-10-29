@@ -279,14 +279,14 @@ function pickFields(data, fields) {
     const newKeys = keys.filter(key => fields.includes(key));
     console.log(newKeys)
 
-    //  for(let key of keys){
-    //     for(let i=0;i<fields.length;i++){
-    //         if(key ===fields[i]){
-    //             console.log(key);
-    //             return key;
-    //         }
-    //     }
-    //  }
+     for(let key of keys){
+        for(let i=0;i<fields.length;i++){
+            if(key ===fields[i]){
+                console.log(key);
+                return key;
+            }
+        }
+     }
 }
 
 const result = pickFields({"color":"blue","name":"Earth","solarSistem":"Milky Way"},["name","color"])
